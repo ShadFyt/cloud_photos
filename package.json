@@ -8,11 +8,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "start": "npm run lite"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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@github.com/ShadFyt/cloud_photos.git"
+    "url": "git+https://github.com/ShadFyt/cloud_photos.git"
   },
   "author": "Ryan",
   "license": "ISC",
