@@ -1,0 +1,23 @@
+{
+  "name": "cloud_photos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/ShadFyt/cloud_photos.git"
+  },
+  "author": "Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShadFyt/cloud_photos/issues"
+  },
+  "homepage": "https://github.com/ShadFyt/cloud_photos#readme"
+}
