@@ -1,17 +1,9 @@
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -19,6 +11,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 import LoginModal from '../loginModal';
+import SignUpDrawer from '../signUpDrawer';
 
 function MainNav() {
     const Links = ['Home', 'Pricing', 'About'];
@@ -61,7 +54,7 @@ function MainNav() {
                 <Flex alignItems={'center'}>
                   <HStack spacing={3}>
                     <LoginModal />
-                    <Button variant="solid" bgColor={"cyan.300"} colorScheme={"cyan"}>Sign Up</Button>
+                    <SignUpDrawer />
                   </HStack>
                 </Flex>
               </Flex>
