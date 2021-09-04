@@ -16,6 +16,9 @@ import {
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
+import LoginModal from '../loginModal';
 
 function MainNav() {
     const Links = ['Home', 'Pricing', 'About'];
@@ -32,10 +35,18 @@ function MainNav() {
             {children}
         </Link>
     )
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
               <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+                <IconButton
+                  size={'md'}
+                  icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                  aria-label={"Open Menu"}
+                  display={{ md: 'none' }}
+                  onClick={isOpen ? onClose : onOpen}
+                />
                 <HStack spacing={8} alignItems={'center'}>
                   <Box>Logo</Box>
                   <HStack
@@ -48,17 +59,22 @@ function MainNav() {
                   </HStack>
                 </HStack>
                 <Flex alignItems={'center'}>
-                    <Box>Login</Box>
+                  <HStack spacing={3}>
+                    <LoginModal />
+                    <Button variant="solid" bgColor={"cyan.300"} colorScheme={"cyan"}>Sign Up</Button>
+                  </HStack>
                 </Flex>
               </Flex>
-                    
+              {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
-                    <Stack as={'nav'} spacing={4}>
-                        {Links.map((link) => (
-                        <NavLink key={link}>{link}</NavLink>
-                        ))}
-                    </Stack>
+                  <Stack as={'nav'} spacing={4}>
+                    {Links.map((link) => (
+                    <NavLink key={link}>{link}</NavLink>
+                    ))}
+                  </Stack>
                 </Box>
+              ) : null}  
+
             </Box>
                     
       </>
