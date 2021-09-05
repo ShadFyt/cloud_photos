@@ -1,4 +1,5 @@
 import { Stack, VStack, HStack, Box, Image, Flex, Text, Center } from "@chakra-ui/react";
+import DownloadButton from "./downloadButton";
 
 
 
@@ -32,7 +33,9 @@ function Photo(props) {
             h={sizes[randNum()]}
 
         >
-            <Center>some text</Center>
+            <Flex justify={"end"}>
+                <DownloadButton />
+            </Flex>
         </Box>
     )
 
