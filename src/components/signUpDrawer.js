@@ -75,7 +75,7 @@ function SignUpDrawer() {
                                         <Input type={"password"} placeholder="Enter a password" />
                                 </FormControl>
                                 <FormControl>
-                                    <Input type={"password"} placeholder={"RE enter password"}/>
+                                    <Input type={"password"} placeholder={"Confirm password"}/>
                                 </FormControl>
                             </VStack>
                         </Stack>

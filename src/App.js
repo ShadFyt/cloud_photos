@@ -1,17 +1,17 @@
 import * as React from "react";
-import { Container } from "@chakra-ui/react"
+import { Box, Stack } from "@chakra-ui/react"
 import { ChakraProvider } from "@chakra-ui/react";
 
-import Image from "./components/image";
+import Images from "./components/images";
 import MainNav from "./components/layout/mainNav";
 
 function App() {
   return (
     <ChakraProvider>
       <MainNav />
-      <Container maxW="xl">
-        <Image />
-      </Container>
+      <Stack>
+        <Images />
+      </Stack>
     </ChakraProvider>
   );
 }
