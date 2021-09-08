@@ -14,7 +14,7 @@ import LoginModal from '../loginModal';
 import SignUpDrawer from '../signUpDrawer';
 
 function MainNav() {
-    const Links = ['Home', 'Pricing', 'About'];
+    const Links = ['Home', 'About', 'Contact Us'];
     const NavLink = ({ children }) => (
         <Link
             px={2}

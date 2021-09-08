@@ -12,6 +12,8 @@ import {
     FormLabel,
     useDisclosure,
   } from "@chakra-ui/react"
+import { Icon } from '@chakra-ui/react';
+import { AiOutlineLogin } from 'react-icons/ai'
 
 
 function LoginModal() {
@@ -24,6 +26,7 @@ function LoginModal() {
                 variant={"ghost"}
                 textColor={"cyan.300"}
                 onClick={onOpen}
+                leftIcon={<Icon as={AiOutlineLogin} />}
                 >Login
             </Button>
 
