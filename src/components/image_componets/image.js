@@ -1,4 +1,4 @@
-import { Stack, VStack, HStack, Box, Image, Flex, useBoolean } from "@chakra-ui/react";
+import {Box,Flex, useBoolean } from "@chakra-ui/react";
 import DownloadButton from "./downloadButton";
 
 
@@ -13,7 +13,7 @@ function Photo(props) {
         "https://images.unsplash.com/photo-1630595612350-97227aef6cc6?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3Mnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     ]
 
-    const sizes = ["sm", "md", "xl"]
+    const sizes = ["sm", "xs", "lg"]
     function randNum(){
        let num = Math.floor(Math.random() * 3)
        return num
