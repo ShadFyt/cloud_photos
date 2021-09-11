@@ -1,5 +1,5 @@
 import { Stack, VStack, HStack, Box, Image, SimpleGrid } from "@chakra-ui/react";
-import Photo from "./image_componets/image";
+import Photo from "./image_components/image_component";
 function Images() {
 
     return (

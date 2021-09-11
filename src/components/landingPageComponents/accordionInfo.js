@@ -7,7 +7,8 @@ import {
     Box,
     HStack,
     Heading,
-    Text
+    Text,
+    Image
 } from "@chakra-ui/react"
 
 
@@ -15,12 +16,12 @@ function MainInfo(){
 
     return (
         <HStack align={"stretch"} spacing={1} justify={"center"} mt={4}>
-            <Box boxSize={"lg"} bg={"gray.100"}>
+            <Box w={"full"} h={"400px"} bg={"ghostwhite"}>
                 <Accordion>
                     <AccordionItem>
                         <AccordionButton>
                             <Box flex={"1"} textAlign={"left"}>
-                                <Text fontSize={"lg"} fontWeight={"black"} fontStyle={"oblique"} fontFamily={"mono"}>Photo storage on the go</Text>
+                                <Text fontSize={"lg"} fontWeight={"hairline"} fontStyle={"oblique"} fontFamily={"mono"}>Photo storage on the go</Text>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -32,7 +33,7 @@ function MainInfo(){
                     <AccordionItem>
                         <AccordionButton>
                             <Box flex={"1"} textAlign={"left"}>
-                                <Text fontSize={"lg"} fontWeight={"black"} fontStyle={"oblique"} fontFamily={"mono"}>Photo lookup made easy</Text>
+                                <Text fontSize={"lg"} fontWeight={"hairline"} fontStyle={"oblique"} fontFamily={"mono"}>Photo lookup made easy</Text>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -44,7 +45,7 @@ function MainInfo(){
                     <AccordionItem>
                         <AccordionButton>
                             <Box flex={"1"} textAlign={"left"}>
-                                <Text fontSize={"lg"} fontWeight={"black"} fontStyle={"oblique"} fontFamily={"mono"}>Securely share your photos</Text>
+                                <Text fontSize={"lg"} fontWeight={"hairline"} fontStyle={"oblique"} fontFamily={"mono"}>Securely share your photos</Text>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -56,15 +57,23 @@ function MainInfo(){
                     <AccordionItem>
                         <AccordionButton>
                             <Box flex={"1"} textAlign={"left"}>
-                                <Text></Text>
-
+                                <Text fontSize={"lg"} fontWeight={"hairline"} fontStyle={"oblique"} fontFamily={"mono"}>Download anywhere</Text>
                             </Box>
+                            <AccordionIcon />
                         </AccordionButton>
+                        <AccordionPanel>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ipsum. Illum minima nulla officia expedita est eos velit, praesentium,
+                            excepturi, quod laboriosam architecto consequuntur reiciendis assumenda similique vel nesciunt corrupti.
+                        </AccordionPanel>
                     </AccordionItem>
                 </Accordion>
             </Box>
-            <Box boxSize={"lg"} bg={"gray.700"}>
-
+            <Box w={"full"} h={"400px"} bg={"gray.700"}>
+                <Image
+                    w={"full"}
+                    h={"full"}
+                    alt={"photo gallery"}
+                    src={"https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fGdhbGxlcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"} />
             </Box>
         </HStack>
     )
