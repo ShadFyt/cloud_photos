@@ -104,9 +104,9 @@ function MainInfo() {
       </Box>
       <Box w={{ md: "full" }} h={"400px"}>
         <Image
+          d={{ base: "none", md: "flex" }}
           w={"full"}
           h={"full"}
-          d={{ sm: "none", md: "flex" }}
           alt={"photo gallery"}
           src={
             "https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fGdhbGxlcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
