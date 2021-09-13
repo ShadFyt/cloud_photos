@@ -12,13 +12,13 @@ import LandingPage from "./components/landingPage";
 
 function App() {
   const [isLogin, setIsLogin] = useControllableState({ defaultValue: "" });
-  const childToParent = (value) => {
+  const loginDisplay = (value) => {
     setIsLogin(value);
   };
 
   return (
     <ChakraProvider>
-      <MainNav childToParent={childToParent} />
+      <MainNav loginDisplay={loginDisplay} />
       <Stack>{isLogin ? <Images /> : <LandingPage />}</Stack>
     </ChakraProvider>
   );

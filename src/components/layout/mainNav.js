@@ -62,7 +62,7 @@ function MainNav({ loginDisplay }) {
           </HStack>
           <Flex alignItems={"center"}>
             <HStack spacing={3}>
-              <LoginModal childToParent={loginDisplay} />
+              <LoginModal loginDisplay={loginDisplay} />
               <SignUpDrawer />
             </HStack>
           </Flex>
