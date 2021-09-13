@@ -6,7 +6,6 @@ import {
   AccordionIcon,
   Box,
   HStack,
-  Heading,
   Text,
   Image,
 } from "@chakra-ui/react";
@@ -15,7 +14,7 @@ function MainInfo() {
   return (
     <HStack align={"stretch"} spacing={1} justify={"center"} mt={4}>
       <Box w={"full"} h={"400px"} bg={"ghostwhite"}>
-        <Accordion>
+        <Accordion defaultIndex={[0]}>
           <AccordionItem>
             <AccordionButton>
               <Box flex={"1"} textAlign={"left"}>
@@ -98,6 +97,25 @@ function MainInfo() {
               ipsum. Illum minima nulla officia expedita est eos velit,
               praesentium, excepturi, quod laboriosam architecto consequuntur
               reiciendis assumenda similique vel nesciunt corrupti.
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionButton>
+              <Box flex={"1"} align={"left"}>
+                <Text
+                  fontSize={"lg"}
+                  fontWeight={"hairline"}
+                  fontStyle={"oblique"}
+                  fontFamily={"mono"}
+                >
+                  Placeholder text
+                </Text>
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+            <AccordionPanel>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quis labore aut? Facere labore dolorum maiores
+              architecto sunt accusamus iste quibusdam, optio numquam similique? Voluptas sunt cumque esse ducimus ea.
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
