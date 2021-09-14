@@ -15,9 +15,13 @@ import {
 import { Icon } from "@chakra-ui/react";
 import { AiOutlineLogin } from "react-icons/ai";
 
-function LoginModal({ loginDisplay }) {
+function LoginModal({ loginDisplay, loginValue }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const value = true;
+  const btnClick = function () {
+    onClose();
+    loginDisplay(true);
+    loginValue(true);
+  };
 
   return (
     <>
@@ -53,7 +57,7 @@ function LoginModal({ loginDisplay }) {
               colorScheme={"cyan"}
               variant={"solid"}
               bgColor={"cyan.300"}
-              onClick={() => loginDisplay(value)}
+              onClick={() => btnClick()}
             >
               Login
             </Button>

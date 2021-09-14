@@ -6,14 +6,24 @@ import {
   IconButton,
   useDisclosure,
   useColorModeValue,
+  useControllableState,
   Stack,
+  Button,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
-import LoginModal from "../loginModal";
-import SignUpDrawer from "../signUpDrawer";
+import LoginModal from "./loginModal";
+import SignUpDrawer from "./signUpDrawer";
 
 function MainNav({ loginDisplay }) {
+  const [isLogin, setIsLogin] = useControllableState({ defaultValue: false });
+  const loginValue = (value) => {
+    setIsLogin(value);
+  };
+  const logout = () => {
+    setIsLogin(false);
+    loginDisplay(false);
+  };
   const Links = ["Home", "About", "Contact Us"];
   const NavLink = ({ children }) => (
     <Link
@@ -36,7 +46,7 @@ function MainNav({ loginDisplay }) {
         as={"nav"}
         zIndex={"overlay"}
         bgPosition={"sticky top"}
-        mb={"4"}
+        mb={"2"}
         bg={useColorModeValue("gray.100", "gray.900")}
         px={4}
       >
@@ -62,8 +72,23 @@ function MainNav({ loginDisplay }) {
           </HStack>
           <Flex alignItems={"center"}>
             <HStack spacing={3}>
-              <LoginModal loginDisplay={loginDisplay} />
-              <SignUpDrawer />
+              {!isLogin ? (
+                <LoginModal
+                  loginDisplay={loginDisplay}
+                  loginValue={loginValue}
+                />
+              ) : (
+                <Button
+                  colorScheme={"blackAlpha"}
+                  size={"sm"}
+                  onClick={() => {
+                    logout();
+                  }}
+                >
+                  Logout
+                </Button>
+              )}
+              {!isLogin && <SignUpDrawer />}
             </HStack>
           </Flex>
         </Flex>
