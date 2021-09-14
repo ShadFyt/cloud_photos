@@ -9,8 +9,11 @@ import {
   useControllableState,
   Stack,
   Button,
+  Icon,
+  Tooltip,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { AiOutlineLogout } from "react-icons/ai";
 
 import LoginModal from "./loginModal";
 import SignUpDrawer from "./signUpDrawer";
@@ -78,15 +81,22 @@ function MainNav({ loginDisplay }) {
                   loginValue={loginValue}
                 />
               ) : (
-                <Button
-                  colorScheme={"blackAlpha"}
-                  size={"sm"}
-                  onClick={() => {
-                    logout();
-                  }}
+                <Tooltip
+                  label="Logout"
+                  aria-label={"tool-tip for logout"}
+                  fontSize={"sm"}
+                  rounded={"full"}
                 >
-                  Logout
-                </Button>
+                  <Button
+                    colorScheme={"blackAlpha"}
+                    variant={"ghost"}
+                    size={"lg"}
+                    rightIcon={<Icon as={AiOutlineLogout} />}
+                    onClick={() => {
+                      logout();
+                    }}
+                  />
+                </Tooltip>
               )}
               {!isLogin && <SignUpDrawer />}
             </HStack>

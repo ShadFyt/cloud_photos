@@ -11,8 +11,8 @@ import {
   FormControl,
   FormLabel,
   useDisclosure,
+  Icon,
 } from "@chakra-ui/react";
-import { Icon } from "@chakra-ui/react";
 import { AiOutlineLogin } from "react-icons/ai";
 
 function LoginModal({ loginDisplay, loginValue }) {
