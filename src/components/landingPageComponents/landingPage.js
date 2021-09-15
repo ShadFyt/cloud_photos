@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import MainInfo from "./accordionInfo";
 import InfoHeader from "./infoHeader";
 import MainHeader from "../layout/mainHeader";
+import PricingTable from "./pricingTable";
 
 function LandingPage() {
   return (
@@ -10,6 +11,7 @@ function LandingPage() {
       <MainHeader />
       <InfoHeader />
       <MainInfo />
+      <PricingTable />
     </Box>
   );
 }

@@ -88,7 +88,8 @@ function MainNav({ loginDisplay }) {
                   rounded={"full"}
                 >
                   <Button
-                    colorScheme={"blackAlpha"}
+                    colorScheme={"cyan"}
+                    textColor={"cyan.300"}
                     variant={"ghost"}
                     size={"lg"}
                     rightIcon={<Icon as={AiOutlineLogout} />}
