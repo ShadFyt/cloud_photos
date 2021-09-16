@@ -31,6 +31,10 @@ function PricingTable() {
 
     return (
         <Box my={8}>
+            <VStack mb={8} w={"400px"} mx={"auto"}>
+                <Heading>Solutions for everyone</Heading>
+                <Text alignSelf={{base: "center", md: "end"}} textColor={"gray.400"}>Try for free with the basic plan!</Text>
+            </VStack>
             <Stack
                 direction={{ base: "column", md: "row" }}
                 justify={"center"}
@@ -38,8 +42,8 @@ function PricingTable() {
                 spacing={{base: 2, lg: 1}}
             >
                 <PriceBox >
-                    <VStack w={"250px"} py={8} px={15} >
-                        <Heading as={"h3"} fontSize={"large"} fontWeight={"semibold"} textColor={"#a97142"}>Bronze</Heading>
+                    <VStack w={"300px"} py={8} px={15} >
+                        <Heading as={"h3"} fontSize={"large"} fontWeight={"semibold"} textColor={"#a97142"}>Basic</Heading>
                         <Text fontSize={"2xl"} fontWeight={"bold"}>Free Tier</Text>
                         <List spacing={2}>
                             <ListItem>
@@ -63,9 +67,9 @@ function PricingTable() {
                     </VStack>
                 </PriceBox>
                 <PriceBox shadow={"dark-lg"}>
-                    <VStack w={"250px"} py={8} px={15}>
+                    <VStack w={"300px"} py={8} px={15}>
                         <Box bgColor={"gray.100"} w={"full"} h={"50px"} alignItems={"center"} justifyContent={"center"} d={"flex"} rounded={"2xl"}>
-                           <Heading as={"h3"} fontSize={"large"} fontWeight={"semibold"} textColor={"goldenrod"}>Gold</Heading>
+                           <Heading as={"h3"} fontSize={"large"} fontWeight={"semibold"} textColor={"goldenrod"}>Pro</Heading>
                         </Box>
                         <HStack spacing={0}>
                             <Text fontWeight={"bold"} fontSize={"2xl"}> &#36;50</Text>
@@ -93,8 +97,8 @@ function PricingTable() {
                     </VStack>
                 </PriceBox>
                 <PriceBox>
-                    <VStack w={"250px"} py={8} px={15} >
-                        <Heading as={"h3"} fontSize={"large"} fontWeight={"bold"} textColor={"#c7c6c4"}>Platinum</Heading>
+                    <VStack w={"300px"} py={8} px={15} >
+                        <Heading as={"h3"} fontSize={"large"} fontWeight={"bold"} textColor={"#c7c6c4"}>Elite</Heading>
                         <HStack>
                              <Text fontSize={"2xl"} fontWeight={"bold"}>Free Tier</Text>
 
