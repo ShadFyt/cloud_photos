@@ -100,8 +100,8 @@ function PricingTable() {
                     <VStack w={"300px"} py={8} px={15} >
                         <Heading as={"h3"} fontSize={"large"} fontWeight={"bold"} textColor={"#c7c6c4"}>Elite</Heading>
                         <HStack>
-                             <Text fontSize={"2xl"} fontWeight={"bold"}>Free Tier</Text>
-
+                            <Text fontWeight={"bold"} fontSize={"2xl"}> &#36;100</Text>
+                            <Text fontWeight={"hairline"} fontSize={"large"}>/Month</Text>
                         </HStack>
                         <List spacing={2}>
                             <ListItem>

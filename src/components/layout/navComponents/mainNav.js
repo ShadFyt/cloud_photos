@@ -11,6 +11,8 @@ import {
   Button,
   Icon,
   Tooltip,
+  useToast,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { AiOutlineLogout } from "react-icons/ai";
@@ -20,14 +22,22 @@ import SignUpDrawer from "./signUpDrawer";
 
 function MainNav({ loginDisplay }) {
   const [isLogin, setIsLogin] = useControllableState({ defaultValue: false });
+  const logoutToast = useToast();
   const loginValue = (value) => {
     setIsLogin(value);
   };
   const logout = () => {
     setIsLogin(false);
     loginDisplay(false);
+    logoutToast({
+      title: "Logout successful",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      label: "toast",
+    });
   };
-  const Links = ["Home", "About", "Contact Us"];
+  const Links = ["Home", "About", "Contact"];
   const NavLink = ({ children }) => (
     <Link
       px={2}
@@ -96,7 +106,9 @@ function MainNav({ loginDisplay }) {
                     onClick={() => {
                       logout();
                     }}
-                  />
+                  >
+                    <VisuallyHidden>Logout</VisuallyHidden>
+                  </Button>
                 </Tooltip>
               )}
               {!isLogin && <SignUpDrawer />}
