@@ -28,9 +28,11 @@ function SignUpDrawer() {
   return (
     <>
       <Button
+        textColor={"white"}
         colorScheme={"cyan"}
         variant={"solid"}
-        bgColor={"cyan.300"}
+        bgColor={"cyan.800"}
+        _hover={{ bgColor: "cyan.700" }}
         onClick={onOpen}
       >
         Sign Up

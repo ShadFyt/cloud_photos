@@ -22,6 +22,7 @@ import LoginModal from "./loginModal";
 import SignUpDrawer from "./signUpDrawer";
 
 function MainNav({ loginDisplay }) {
+  console.log(loginDisplay);
   const [isLogin, setIsLogin] = useControllableState({ defaultValue: false });
   const logoutToast = useToast();
   const loginValue = (value) => {
@@ -100,7 +101,7 @@ function MainNav({ loginDisplay }) {
                 >
                   <Button
                     colorScheme={"cyan"}
-                    textColor={"cyan.300"}
+                    textColor={"cyan.800"}
                     variant={"ghost"}
                     size={"lg"}
                     rightIcon={<Icon as={AiOutlineLogout} />}

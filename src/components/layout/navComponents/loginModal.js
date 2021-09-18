@@ -29,7 +29,7 @@ function LoginModal({ loginDisplay, loginValue }) {
       <Button
         colorScheme={"cyan"}
         variant={"ghost"}
-        textColor={"cyan.300"}
+        textColor={"cyan.800"}
         onClick={onOpen}
         leftIcon={<Icon as={AiOutlineLogin} />}
       >
