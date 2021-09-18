@@ -41,7 +41,7 @@ function LoginModal({ loginDisplay, loginValue }) {
           <ModalHeader alignSelf={"center"} as={"em"}>
             Login
           </ModalHeader>
-          <ModalCloseButton textColor={"red.400"} />
+          <ModalCloseButton textColor={"blackAlpha.700"} />
           <ModalBody p={4}>
             <FormControl>
               <FormLabel>Username</FormLabel>

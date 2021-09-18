@@ -84,7 +84,7 @@ function MainNav({ loginDisplay }) {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <HStack spacing={3}>
+            <HStack spacing={2}>
               {!isLogin ? (
                 <LoginModal
                   loginDisplay={loginDisplay}
