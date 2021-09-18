@@ -12,6 +12,7 @@ import {
 import { FiLinkedin, FiTwitter } from "react-icons/fi";
 import { DiGithubFull } from "react-icons/di";
 import { ImYoutube2 } from "react-icons/im";
+import { EmailIcon } from "@chakra-ui/icons";
 
 function Footer() {
   return (
@@ -79,9 +80,14 @@ function Footer() {
       </Stack>
       <Divider />
       <HStack justify={"space-around"}>
-        <Text ml={3} fontWeight={"100"} fontFamily={"sans-serif"}>
-          email will go here?
-        </Text>
+        <Button
+          _hover={{ boxShadow: "dark-lg", bgColor: "white" }}
+          leftIcon={<EmailIcon />}
+          colorScheme="black"
+          variant="outline"
+        >
+          ryan@info.ca
+        </Button>
         <VStack>
           <Text mr={5}>Connect with us</Text>
           <HStack spacing={3}>

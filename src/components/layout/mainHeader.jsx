@@ -25,7 +25,7 @@ function MainHeader() {
           as={"h4"}
           size={"sm"}
           colorScheme={"cyan"}
-          color={"cyan.100"}
+          color={"cyan.400"}
           mx={"auto"}
         >
           Your Personal Gallery

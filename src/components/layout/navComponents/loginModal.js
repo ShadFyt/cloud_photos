@@ -57,7 +57,7 @@ function LoginModal({ loginDisplay, loginValue }) {
             <Button
               colorScheme={"cyan"}
               variant={"solid"}
-              bgColor={"cyan.300"}
+              bgColor={"cyan.400"}
               onClick={() => btnClick()}
             >
               Login
