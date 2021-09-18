@@ -11,12 +11,8 @@ import {
 } from "@chakra-ui/react";
 
 function MainInfo() {
-  return (
-    <HStack align={"stretch"} spacing={1} justify={"center"} mt={4}>
-      <Box w={"full"} h={"400px"} bg={"ghostwhite"}>
-        <Accordion defaultIndex={[0]}>
-          <AccordionItem>
-            <AccordionButton>
+
+  const AccordionText = ({children}) => (
               <Box flex={"1"} textAlign={"left"}>
                 <Text
                   fontSize={"lg"}
@@ -24,9 +20,18 @@ function MainInfo() {
                   fontStyle={"oblique"}
                   fontFamily={"mono"}
                 >
-                  Photo storage on the go
+                  {children}
                 </Text>
               </Box>
+  );
+
+  return (
+    <HStack align={"stretch"} spacing={1} justify={"center"} mt={4}>
+      <Box w={"full"} h={"400px"} bg={"ghostwhite"}>
+        <Accordion defaultIndex={[0]}>
+          <AccordionItem>
+            <AccordionButton>
+              <AccordionText>Photo storage on the go</AccordionText>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel p={4}>
@@ -38,16 +43,7 @@ function MainInfo() {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton>
-              <Box flex={"1"} textAlign={"left"}>
-                <Text
-                  fontSize={"lg"}
-                  fontWeight={"hairline"}
-                  fontStyle={"oblique"}
-                  fontFamily={"mono"}
-                >
-                  Photo lookup made easy
-                </Text>
-              </Box>
+              <AccordionText>Photo lookup made easy</AccordionText>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
@@ -59,16 +55,7 @@ function MainInfo() {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton>
-              <Box flex={"1"} textAlign={"left"}>
-                <Text
-                  fontSize={"lg"}
-                  fontWeight={"hairline"}
-                  fontStyle={"oblique"}
-                  fontFamily={"mono"}
-                >
-                  Securely share your photos
-                </Text>
-              </Box>
+              <AccordionText>Securely share your photos</AccordionText>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
@@ -80,16 +67,7 @@ function MainInfo() {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton>
-              <Box flex={"1"} textAlign={"left"}>
-                <Text
-                  fontSize={"lg"}
-                  fontWeight={"hairline"}
-                  fontStyle={"oblique"}
-                  fontFamily={"mono"}
-                >
-                  Download anywhere
-                </Text>
-              </Box>
+              <AccordionText>Download anywhere</AccordionText>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
@@ -101,16 +79,7 @@ function MainInfo() {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton>
-              <Box flex={"1"} align={"left"}>
-                <Text
-                  fontSize={"lg"}
-                  fontWeight={"hairline"}
-                  fontStyle={"oblique"}
-                  fontFamily={"mono"}
-                >
-                  Placeholder text
-                </Text>
-              </Box>
+              <AccordionText>Placeholder text</AccordionText>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
