@@ -1,3 +1,4 @@
+import React from "react";
 import { Box } from "@chakra-ui/react";
 import MainHeader from "../layout/mainHeader";
 import Photo from "./image_component";

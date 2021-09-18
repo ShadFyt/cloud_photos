@@ -9,20 +9,20 @@ import {
   Text,
   Image,
 } from "@chakra-ui/react";
+import React from "react";
 
 function MainInfo() {
-
-  const AccordionText = ({children}) => (
-              <Box flex={"1"} textAlign={"left"}>
-                <Text
-                  fontSize={"lg"}
-                  fontWeight={"hairline"}
-                  fontStyle={"oblique"}
-                  fontFamily={"mono"}
-                >
-                  {children}
-                </Text>
-              </Box>
+  const AccordionText = ({ children }) => (
+    <Box flex={"1"} textAlign={"left"}>
+      <Text
+        fontSize={"lg"}
+        fontWeight={"hairline"}
+        fontStyle={"oblique"}
+        fontFamily={"mono"}
+      >
+        {children}
+      </Text>
+    </Box>
   );
 
   return (
@@ -83,8 +83,10 @@ function MainInfo() {
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quis labore aut? Facere labore dolorum maiores
-              architecto sunt accusamus iste quibusdam, optio numquam similique? Voluptas sunt cumque esse ducimus ea.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quis
+              labore aut? Facere labore dolorum maiores architecto sunt
+              accusamus iste quibusdam, optio numquam similique? Voluptas sunt
+              cumque esse ducimus ea.
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

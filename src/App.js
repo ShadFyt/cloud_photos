@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { ChakraProvider, Stack, useControllableState } from "@chakra-ui/react";
 
 import Images from "./components/image_components/images";
